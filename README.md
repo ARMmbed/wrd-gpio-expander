@@ -1,2 +1,2 @@
 # wrd-gpio-expander
-Wearable Reference Design GPIO switch.
+Wearable Reference Design GPIO expander.
