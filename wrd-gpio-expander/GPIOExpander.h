@@ -18,7 +18,7 @@
 #ifndef __WRD_GPIO_EXPANDER_H__
 #define __WRD_GPIO_EXPANDER_H__
 
-#if YOTTA_CFG_HARDWARE_WEARABLE_REFERENCE_DESIGN_GPIO_EXPANDER_PRESENT
+#if YOTTA_CFG_HARDWARE_WRD_GPIO_EXPANDER_PRESENT
 #include "wrd-gpio-expander/GPIOExpanderImplementation.h"
 #else
 #include "wrd-gpio-expander/GPIOExpanderNotPresent.h"
@@ -135,7 +135,7 @@ public:
     }
 
 private:
-#if YOTTA_CFG_HARDWARE_WEARABLE_REFERENCE_DESIGN_GPIO_EXPANDER_PRESENT
+#if YOTTA_CFG_HARDWARE_WRD_GPIO_EXPANDER_PRESENT
     GPIOExpanderImplementation gpio;
 #else
     GPIOExpanderNotPresent gpio;
