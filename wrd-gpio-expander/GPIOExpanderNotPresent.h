@@ -126,25 +126,12 @@ public:
     }
 
     /**
-     * @brief Interrupt callback function.
-     * @details The callback function has the I2C address, fired pins, and pin values
-     *          as parameters. The address is passed so a single callback function can
-     *          handle multiple expanders. The pins and values are useful for determining
-     *          which pins have fired and what edge triggered the interrupt.
-     *
-     * @param uint16_t address
-     * @param uint32_t pins
-     * @param uint32_t values
-     */
-    typedef FunctionPointer3<void, uint16_t, uint32_t, uint32_t> IRQCallback_t;
-
-    /**
      * @brief Callback function for when interrupts have fired.
      * @details The fired pins and values are passes as arguments in callback function.
      *
      * @param callback Parameters: address, fired pins, and pin values.
      */
-    void setInterruptHandler(IRQCallback_t callback)
+    void setInterruptHandler(FunctionPointer3<void, uint16_t, uint32_t, uint32_t> callback)
     {
         (void) callback;
     }
@@ -153,6 +140,15 @@ public:
      * @brief Clear handler set with setInterruptHandler.
      */
     void clearInterruptHandler(void) { }
+
+    /**
+     * @brief Get number of pins available on device.
+     * @return Number of pins.
+     */
+    uint8_t getNumberOfPins(void) const
+    {
+        return 0;
+    }
 };
 
 #endif // __WRD_GPIO_EXPANDER_NOT_PRESENT_H__

@@ -134,6 +134,15 @@ public:
         gpio.clearInterruptHandler();
     }
 
+    /**
+     * @brief Get number of pins available on device.
+     * @return Number of pins.
+     */
+    uint8_t getNumberOfPins(void) const
+    {
+        return gpio.getNumberOfPins();
+    }
+
 private:
 #if YOTTA_CFG_HARDWARE_WRD_GPIO_EXPANDER_PRESENT
     GPIOExpanderImplementation gpio;
