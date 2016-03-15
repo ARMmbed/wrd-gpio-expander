@@ -15,7 +15,8 @@
   },
   "targetDependencies": {
     "nxp-pcal64": {
-      "wrd-gpio-expander-nxp-pcal64": "^1.0.0"
+      "wrd-gpio-expander-nxp-pcal64": "^1.0.0",
+      "wrd-utilities": "^2.0.0"
     }
   }
 }
